@@ -4,7 +4,10 @@
         <style>
             #fishtank {
                 width: 350px;
-                background-color: aqua;
+                background-color: #eee;
+                margin: 60px auto;
+                padding-top: 40px;
+                position: relative;
             }
             #fish1 { color: red }
             #fish2 { color: orange }
@@ -14,6 +17,37 @@
             #fish6 { color: gold }
             #fish7 { color: brown }
             #crab  { color: red }
+            marquee {
+              padding: 10px 0;
+              background: aqua;
+            }
+            #fishtank:after, #fishtank:before {
+              position: absolute;
+              content: '';
+              display: block;
+            }
+            #fishtank:after {
+              border: 69px solid white;
+              border-radius: 1000px;
+              top: -70px;
+              left: -70px;
+              right: -70px;
+              bottom: -70px;
+            }
+            #fishtank:before {
+              z-index: 5;
+              width: 50%;
+              height: 0;
+              top: -6px;
+              left: 11%;
+              border: 50px solid #eee;
+              margin: auto;
+              border-bottom-color: transparent;
+              border-left-color: transparent;
+              border-right-color: transparent;
+              border-top-width: 29px;
+            }
+
         </style>
     </head>
     <body>
@@ -25,7 +59,7 @@
             <marquee id="fish5" direction="right" scrollamount=5>&gt;&lt;&gt;</marquee>
             <marquee id="fish6" scrollamount=6>&lt;&gt;&lt;</marquee>
             <marquee id="fish7" direction="right" scrollamount=8>&gt;&lt;&gt;</marquee>
-            <br><br>
+            <br>
             <marquee id="crab" behavior="alternate" scrollamount="4"> (\/)O_o(\/) </marquee>
         </div>
     </body>
